@@ -46,8 +46,11 @@
 ?>
 
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
-  <?php if (!$label_hidden): ?>
+  <?php if (!$label_hidden && ($element['#field_name'] != "field_author") && ($element['#field_name'] != "field_language") && ($element['#field_name'] != "field_period") && ($element['#field_name'] != "field_genre") && ($element['#field_name'] != "field_keywords")): ?>
     <div class="field-label"<?php print $title_attributes; ?>><?php print $label ?>&nbsp;</div>
+  <?php endif; ?>
+  <?php if (($element['#field_name'] == "field_author") || ($element['#field_name'] == "field_language") || ($element['#field_name'] == "field_period") || ($element['#field_name'] == "field_genre") || ($element['#field_name'] == "field_keywords")): ?>
+  	<div class="field-label"<?php print $title_attributes; ?>><?php print $label ?>&nbsp;|&nbsp;</div>
   <?php endif; ?>
   <div class="field-items"<?php print $content_attributes; ?>>
     <?php foreach ($items as $delta => $item): ?>
@@ -55,3 +58,5 @@
     <?php endforeach; ?>
   </div>
 </div>
+
+

@@ -1054,7 +1054,7 @@ body.page-node {
     div.group-left {
       width: 35% !important;
       div.text-information {
-        line-height: 1em;
+        line-height: 1.5em;
         font-size: small;
         h2 {
           border-bottom: none !important;
@@ -1062,75 +1062,6 @@ body.page-node {
         div.field-label {
           font-size: small;
           font-weight: bolder;
-        }
-        div.field-name-field-author {
-          div.field-label {
-            visibility: hidden;
-            position: relative;
-          }
-          div.field-label:after {
-            visibility: visible;
-            position: absolute;
-            top: 0;
-            left: 0;
-            content: "Author |";/*here and below this is to replace Drupal's ":" with "|"*/
-            color: 000000;
-          }
-        }
-        div.field-name-field-language {
-          div.field-label {
-            visibility: hidden;
-            position: relative;
-          }
-          div.field-label:after {
-            visibility: visible;
-            position: absolute;
-            top: 0;
-            left: 0;
-            content: "Language |";
-            color: 000000;
-        }
-      }
-      div.field-name-field-period {
-        div.field-label {
-            visibility: hidden;
-            position: relative;
-          }
-          div.field-label:after {
-            visibility: visible;
-            position: absolute;
-            top: 0;
-            left: 0;
-            content: "Period |";
-            color: 000000;
-        }
-      }
-      div.field-name-field-genre {
-        div.field-label {
-            visibility: hidden;
-            position: relative;
-          }
-          div.field-label:after {
-            visibility: visible;
-            position: absolute;
-            top: 0;
-            left: 0;
-            content: "Genre |";
-            color: 000000;
-        }
-      }
-      div.field-name-field-keywords {
-        div.field-label {
-            visibility: hidden;
-            position: relative;
-          }
-          div.field-label:after {
-            visibility: visible;
-            position: absolute;
-            top: 0;
-            left: 0;
-            content: "Keywords |";
-            color: 000000;
         }
         div.field-items {
           max-width: 66%; /*forces items to wrap*/
@@ -1178,7 +1109,7 @@ body.page-node {
       }
     }
   }
-}
+
 
 /*styles for the About Us page*/
 body.page-node {

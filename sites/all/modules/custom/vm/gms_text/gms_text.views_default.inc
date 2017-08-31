@@ -41,11 +41,20 @@ function gms_text_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'responsive_grid';
   $handler->display->display_options['style_options']['columns'] = '3';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Sticky */
+  $handler->display->display_options['fields']['sticky']['id'] = 'sticky';
+  $handler->display->display_options['fields']['sticky']['table'] = 'node';
+  $handler->display->display_options['fields']['sticky']['field'] = 'sticky';
+  $handler->display->display_options['fields']['sticky']['label'] = '';
+  $handler->display->display_options['fields']['sticky']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['sticky']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['sticky']['not'] = 0;
   /* Field: Content: Icon */
   $handler->display->display_options['fields']['field_icon']['id'] = 'field_icon';
   $handler->display->display_options['fields']['field_icon']['table'] = 'field_data_field_icon';
   $handler->display->display_options['fields']['field_icon']['field'] = 'field_icon';
   $handler->display->display_options['fields']['field_icon']['label'] = '';
+  $handler->display->display_options['fields']['field_icon']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_icon']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_icon']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_icon']['settings'] = array(
@@ -57,6 +66,7 @@ function gms_text_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
@@ -65,8 +75,26 @@ function gms_text_views_default_views() {
   $handler->display->display_options['fields']['field_original_language_title']['table'] = 'field_data_field_original_language_title';
   $handler->display->display_options['fields']['field_original_language_title']['field'] = 'field_original_language_title';
   $handler->display->display_options['fields']['field_original_language_title']['label'] = '';
+  $handler->display->display_options['fields']['field_original_language_title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_original_language_title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_original_language_title']['type'] = 'text_plain';
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="sticky-status-[sticky]">
+<div class="view-icon">
+[field_icon]
+</div>
+<div class="view-rewrite-title">
+[title]
+</div>
+<div class="view-rewrite-orig-title">
+[field_original_language_title]
+</div>
+</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Sticky */
   $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
   $handler->display->display_options['sorts']['sticky']['table'] = 'node';
